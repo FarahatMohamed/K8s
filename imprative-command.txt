@@ -1,3 +1,6 @@
+--Dockerfile build --->  docker build . -t farahat/k8s-web-server
+
+kubectl create deployment k8s-web-server --image=farahat2mohamed/k8s-web-server
 miniKube dashboard
 kubectl get all
 kubectl apply -f apache-deployment.yaml
