@@ -5,7 +5,7 @@ const app= express()
 const PORT =3000
 
 app.get("/",(req,res)=>{
-    const message =`hello world, I am pod ${os.hostname()}`
+    const message =`hello world,version 2 I am Pod ${os.hostname()}`
     res.send(message)
 })
 

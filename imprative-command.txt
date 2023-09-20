@@ -7,3 +7,5 @@ kubectl apply -f apache-deployment.yaml
 kubectl expose deployment apache-deployment --name=apache-service --type=ClusterIP --port=8080 --target-port=8080
 minikube service apache-service === kubectl port-forward service/apache-service 8090:8080
 kubectl describe po -l=app=webserver ==kubectl describe pods -l=app=webserver
+
+kubectl set image deploy k8s-web-server k8s-web-server=farahat2mohamed/k8s-web-server:1.2.0
