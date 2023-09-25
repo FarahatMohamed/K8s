@@ -1,0 +1,23 @@
+kubectl create deploy app1 --image=httpd:latest
+kubectl create deploy app2 --image=gcr.io/google-samples/hello-app:1.0
+kubectl create deploy app3 --image=gcr.io/google-samples/hello-app:2.0
+
+kubectl scale deploy app1 --replicas=6
+
+kubectl expose deploy app1 --port=80 --type=NodePort
+kubectl expose deploy app2 --port=8080 --type=NodePort
+kubectl expose deploy app3 --port=8080 --type=NodePort
+
+kubectl get svc
+
+minikube service app1
+
+kubectl apply -f fanout.yaml
+
+kubectl get ingress
+
+==Ingress Class:    <none> not ngnix why
+
+cat /etc/hosts
+
+sudo /bin/sh -c 'echo "192.168.49.2 codographia.io" >> /etc/hosts'
