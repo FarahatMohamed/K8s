@@ -9,3 +9,6 @@ minikube service apache-service === kubectl port-forward service/apache-service 
 kubectl describe po -l=app=webserver ==kubectl describe pods -l=app=webserver
 
 kubectl set image deploy k8s-web-server k8s-web-server=farahat2mohamed/k8s-web-server:1.2.0
+
+
+kubectl delete all --all -n default

@@ -17,7 +17,13 @@ kubectl apply -f fanout.yaml
 kubectl get ingress
 
 ==Ingress Class:    <none> not ngnix why
-
+--miniKube ssh --to show hosts
 cat /etc/hosts
 
 sudo /bin/sh -c 'echo "192.168.49.2 codographia.io" >> /etc/hosts'
+
+curl codographia.io
+
+--to add or enable class nginx for igress
+
+minikube addons enable ingress
