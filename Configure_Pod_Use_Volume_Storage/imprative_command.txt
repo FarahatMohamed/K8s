@@ -1,0 +1,23 @@
+ kubectl get pod redis --watch
+
+ kubectl exec -it redis -- /bin/bash
+
+PS C:\Users\USER> kubectl exec -it redis -- /bin/bash
+root@redis:/data# ls
+redis
+root@redis:/data# cd /data/redis
+root@redis:/data/redis# echo hellow word > file
+root@redis:/data/redis# ls
+file
+root@redis:/data/redis# cat file
+hellow word
+root@redis:/data/redis#
+
+
+kubectl get pod redis --watch
+
+apt-get update
+apt-get install procps
+
+ps aux
+kill id
