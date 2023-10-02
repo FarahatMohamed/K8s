@@ -1,0 +1,7 @@
+kubectl create configmap config-file --from-file=C:\Users\USER\Desktop\CICD\K8s\configMap\db.properties
+kubectl get cm config-file -o yaml
+
+kubectl create configmap key --from-literal=key1=1111
+
+kubectl create configmap --help
+Create a config map based on a file, directory, or specified literal value.

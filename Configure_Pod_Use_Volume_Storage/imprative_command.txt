@@ -21,3 +21,5 @@ apt-get install procps
 
 ps aux
 kill id
+
+minikube addons list
